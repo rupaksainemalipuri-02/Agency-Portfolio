@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="The Boring Club - A modern, responsive portfolio website of a team of five developers building creative web experiences using HTML, CSS, and JavaScript.">
+  <title>The Boring Club | Team Agency Portfolio</title>
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Inline script to prevent Flash of Unstyled Content (FOUC) -->
+  <script>
+    {
+      const theme = localStorage.getItem('theme');
+      if (theme) {
+        document.querySelector('meta[name="color-scheme"]').content = theme;
+        document.documentElement.className = theme;
+      } else {
+        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.className = systemDark ? 'dark' : 'light';
+      }
+    }
+  </script>
+  
+  <!-- CSS stylesheet with cache buster -->
+  <link rel="stylesheet" href="css/style.css?v=1.1">
+</head>
+<body>
+  <!-- Header / Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" id="nav-logo">
+        <span class="logo-accent">&lt;</span>The Boring Club<span class="logo-accent">/&gt;</span>
+      </a>
+      
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#team" class="nav-link">Team</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      
+      <div class="nav-actions">
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light/dark theme" type="button">
+          <!-- Sun Icon -->
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <!-- Moon Icon -->
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          </svg>
+        </button>
+        
+        <!-- Mobile Menu Toggle (Hamburger) -->
+        <button id="menu-toggle" class="menu-toggle-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu" type="button">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay Menu -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay" aria-hidden="true">
+    <nav class="mobile-nav-links" aria-label="Mobile Navigation">
+      <a href="#home" class="mobile-nav-link">Home</a>
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#team" class="mobile-nav-link">Team</a>
+      <a href="#projects" class="mobile-nav-link">Projects</a>
+      <a href="#contact" class="mobile-nav-link">Contact</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <!-- Animated Background Shapes -->
+      <div class="bg-shape shape-1" aria-hidden="true"></div>
+      <div class="bg-shape shape-2" aria-hidden="true"></div>
+      <div class="bg-shape shape-3" aria-hidden="true"></div>
+      
+      <div class="hero-container container">
+        <div class="hero-content scroll-reveal">
+          <div class="badge-container">
+            <span class="hero-badge">Web Design & Development</span>
+          </div>
+          <h1 class="hero-title">The Boring Club</h1>
+          <p class="hero-subtitle">Five developers building creative web experiences using HTML, CSS and JavaScript.</p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">Explore Projects</a>
+            <a href="#team" class="btn btn-secondary">Meet The Team</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section section-padding">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <span class="section-tag">Who We Are</span>
+          <h2 class="section-title">Elevating the Basics</h2>
+          <p class="section-desc">
+            The Boring Club is a team of five aspiring developers passionate about web development, UI design, problem solving, and building practical applications using modern JavaScript.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Mission Card -->
+          <div class="about-card scroll-reveal">
+            <div class="card-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-icon">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="6"></circle>
+                <circle cx="12" cy="12" r="2"></circle>
+              </svg>
+            </div>
+            <h3 class="card-title">Our Mission</h3>
+            <p class="card-content">
+              To build clean, accessible, and high-performance web applications. We avoid unnecessary bloat and prove that simple, standard web technologies are incredibly powerful.
+            </p>
+          </div>
+
+          <!-- Vision Card -->
+          <div class="about-card scroll-reveal">
+            <div class="card-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-icon">
+                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </div>
+            <h3 class="card-title">Our Vision</h3>
+            <p class="card-content">
+              To refine our craft, push the limits of Vanilla JavaScript, and grow into elite software engineers capable of designing outstanding digital solutions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tech Stack Display -->
+        <div class="tech-stack-container scroll-reveal">
+          <h3 class="tech-title">Technologies We Use</h3>
+          <div class="tech-grid">
+            <div class="tech-item" title="HTML5">
+              <div class="tech-logo">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="tech-icon html-color">
+                  <path d="M1.5 0h21l-1.9 21.2L12 24l-8.6-2.8L1.5 0zm15.7 6.1H6.7l.4 4.5h8.3l-.4 4.6L12 16.2l-3-1-.2-2h-2.5l.3 4 5.4 1.8 5.4-1.8.8-9.1V6.1z"></path>
+                </svg>
+              </div>
+              <span class="tech-name">HTML5</span>
+            </div>
+            
+            <div class="tech-item" title="CSS3">
+              <div class="tech-logo">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="tech-icon css-color">
+                  <path d="M1.5 0h21l-1.9 21.2L12 24l-8.6-2.8L1.5 0zm4.2 4.5l.7 8.3L12 14.2l5.6-1.4.7-8.3H5.7zm9.9 2.5l-.2 2.3H8.5l-.2-2.3h7.3z"></path>
+                </svg>
+              </div>
+              <span class="tech-name">CSS3</span>
+            </div>
+
+            <div class="tech-item" title="JavaScript">
+              <div class="tech-logo">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="tech-icon js-color">
+                  <path d="M0 0h24v24H0V0zm20 18.2c0-1-.5-1.7-1.7-2.2-.6-.2-1.3-.4-1.8-.7-.4-.2-.5-.4-.5-.7 0-.4.3-.6.9-.6.7 0 1.2.3 1.5.8l1.7-1.1c-.6-1.1-1.6-1.7-3.2-1.7-1.9 0-3.2 1.1-3.2 2.8 0 1.6 1 2.3 2.8 3 .8.3 1.5.5 1.8.8.4.3.5.6.5.9 0 .5-.4.8-1.1.8-.9 0-1.6-.4-2-1.2l-1.7 1c.7 1.4 2.1 2.2 3.8 2.2 2 0 3.4-1.1 3.4-3.1zm-8.8-1.4v-4.7H9v4.9c0 1.3-.6 1.9-1.8 1.9-.9 0-1.5-.4-1.7-1.1l-1.7 1c.6 1.3 1.8 2.1 3.5 2.1 2.9 0 4.2-1.6 4.2-4.1z"></path>
+                </svg>
+              </div>
+              <span class="tech-name">JavaScript</span>
+            </div>
+
+            <div class="tech-item" title="Git">
+              <div class="tech-logo">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="tech-icon git-color">
+                  <path d="M23.3 10.9L13.1.7C12.7.3 12-.1 11.3-.1c-.7 0-1.4.3-1.8.7L6.2 3.9l3.3 3.3c.3-.1.6-.2 1-.2 1 0 1.8.8 1.8 1.8 0 .4-.1.7-.2 1l3.3 3.3c.3-.1.6-.2 1-.2 1.1 0 1.9.9 1.9 1.9s-.9 1.9-1.9 1.9-1.9-.9-1.9-1.9c0-.4.1-.7.2-1L11.5 11c-.3.1-.6.2-1 .2-1.1 0-1.9-.9-1.9-1.9 0-.4.1-.7.2-1L5.5 5 1 9.5c-.5.5-.8 1.1-.8 1.8 0 .7.3 1.4.7 1.8l10.2 10.2c.5.5 1.1.7 1.8.7.7 0 1.4-.3 1.8-.7l8.6-8.6c1-1 1-2.6 0-3.8z"></path>
+                </svg>
+              </div>
+              <span class="tech-name">Git</span>
+            </div>
+
+            <div class="tech-item" title="GitHub">
+              <div class="tech-logo">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="tech-icon github-color">
+                  <path d="M12 .3C5.4.3 0 5.7 0 12.4c0 5.3 3.5 9.8 8.2 11.4.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1.1 1.9 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.3-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18 3 19 3.2 19 3.2c.6 1.7.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"></path>
+                </svg>
+              </div>
+              <span class="tech-name">GitHub</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section section-padding alt-bg">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <span class="section-tag">Our Brains</span>
+          <h2 class="section-title">Meet the Team</h2>
+          <p class="section-desc">
+            We are five college students collaborating to build modern, high-quality front-end layouts. Each brings a unique skillset to the development lifecycle.
+          </p>
+        </div>
+
+        <!-- Dynamic Team Grid: Injected by JS -->
+        <div class="team-grid" id="team-grid">
+          <!-- JS will render cards here dynamically -->
+          <div class="fallback-spinner" aria-hidden="true">Loading team members...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="stats" class="stats-section section-padding">
+      <div class="container">
+        <div class="stats-grid">
+          <!-- Stat Item 1 -->
+          <div class="stat-item scroll-reveal">
+            <div class="stat-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <div class="stat-number" data-target="5">0</div>
+            <div class="stat-label">Team Members</div>
+          </div>
+
+          <!-- Stat Item 2 -->
+          <div class="stat-item scroll-reveal">
+            <div class="stat-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </div>
+            <div class="stat-number" data-target="12">0</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+
+          <!-- Stat Item 3 -->
+          <div class="stat-item scroll-reveal">
+            <div class="stat-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+            </div>
+            <div class="stat-number" data-target="24">0</div>
+            <div class="stat-label">GitHub Repositories</div>
+          </div>
+
+          <!-- Stat Item 4 -->
+          <div class="stat-item scroll-reveal">
+            <div class="stat-icon-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stat-icon">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div class="stat-number" data-target="1500">0</div>
+            <div class="stat-label">Hours of Coding</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section section-padding alt-bg">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <span class="section-tag">Our Showcase</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-desc">
+            Explore some of the applications built by our team members. These projects demonstrate our proficiency in styling, interactive user experiences, and logic.
+          </p>
+        </div>
+
+        <!-- Dynamic Projects Grid: Injected by JS -->
+        <div class="projects-grid" id="projects-grid">
+          <!-- JS will render cards here dynamically -->
+          <div class="fallback-spinner" aria-hidden="true">Loading projects...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section section-padding">
+      <div class="container">
+        <div class="skills-layout">
+          <div class="skills-info scroll-reveal">
+            <span class="section-tag">Our Strengths</span>
+            <h2 class="section-title">Overall Team Expertise</h2>
+            <p class="section-desc">
+              By combining our individual skillsets, we cover the full range of front-end capabilities. Here is an overview of our collective expertise.
+            </p>
+            <div class="skills-design-element" aria-hidden="true">
+              <div class="orbit-circle outer">
+                <div class="orbit-circle inner"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="skills-bars scroll-reveal">
+            <!-- Skill 1 -->
+            <div class="skill-item">
+              <div class="skill-info-row">
+                <span class="skill-name">HTML5 / Semantic Markup</span>
+                <span class="skill-percentage">95%</span>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill" data-progress="95%"></div>
+              </div>
+            </div>
+
+            <!-- Skill 2 -->
+            <div class="skill-item">
+              <div class="skill-info-row">
+                <span class="skill-name">CSS3 / Layouts & Animations</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill" data-progress="90%"></div>
+              </div>
+            </div>
+
+            <!-- Skill 3 -->
+            <div class="skill-item">
+              <div class="skill-info-row">
+                <span class="skill-name">Vanilla JavaScript / DOM API</span>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill" data-progress="85%"></div>
+              </div>
+            </div>
+
+            <!-- Skill 4 -->
+            <div class="skill-item">
+              <div class="skill-info-row">
+                <span class="skill-name">Git & Collaborative Workflow</span>
+                <span class="skill-percentage">80%</span>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill" data-progress="80%"></div>
+              </div>
+            </div>
+
+            <!-- Skill 5 -->
+            <div class="skill-item">
+              <div class="skill-info-row">
+                <span class="skill-name">Problem Solving & UI/UX Design</span>
+                <span class="skill-percentage">88%</span>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill" data-progress="88%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section-padding alt-bg">
+      <div class="container">
+        <div class="contact-layout">
+          <div class="contact-info scroll-reveal">
+            <span class="section-tag">Let's Connect</span>
+            <h2 class="section-title">Start a Project</h2>
+            <p class="section-desc">
+              Have an idea or a project submission in mind? Write to us, and we will get back to you with a clean, lightweight, and modern layout.
+            </p>
+            
+            <div class="contact-methods">
+              <div class="contact-method-item">
+                <div class="contact-icon-wrapper">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-method-icon">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="method-title">Email Us</h4>
+                  <a href="mailto:hello@theboringclub.edu" class="method-value">hello@theboringclub.edu</a>
+                </div>
+              </div>
+
+              <div class="contact-method-item">
+                <div class="contact-icon-wrapper">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-method-icon">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></circle>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="method-title">Find Us</h4>
+                  <p class="method-value">Campus Innovation Hub, Room 402</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Client-validated Form -->
+          <div class="contact-form-container scroll-reveal">
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="form-name">Full Name</label>
+                <input type="text" id="form-name" name="name" placeholder="John Doe" required autocomplete="name">
+                <span class="error-message" id="error-name" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email">Email Address</label>
+                <input type="email" id="form-email" name="email" placeholder="john@example.com" required autocomplete="email">
+                <span class="error-message" id="error-email" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject">Subject</label>
+                <input type="text" id="form-subject" name="subject" placeholder="Project Collaboration" required>
+                <span class="error-message" id="error-subject" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message">Message</label>
+                <textarea id="form-message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+                <span class="error-message" id="error-message" aria-live="polite"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            </form>
+
+            <!-- Success Overlay Card -->
+            <div class="form-success-card" id="form-success-card" aria-hidden="true">
+              <div class="success-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="success-icon">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="success-title">Message Sent!</h3>
+              <p class="success-desc">Thank you for reaching out. We will get back to you within 24 hours.</p>
+              <button type="button" class="btn btn-secondary" id="success-close-btn">Send Another Message</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <a href="#home" class="footer-logo">
+            <span class="logo-accent">&lt;</span>The Boring Club<span class="logo-accent">/&gt;</span>
+          </a>
+          <p class="footer-desc">
+            A collaborative development team building clean, minimal, and premium quality projects using native web standards.
+          </p>
+        </div>
+
+        <div class="footer-links-group">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home" class="footer-link-item">Home</a></li>
+            <li><a href="#about" class="footer-link-item">About</a></li>
+            <li><a href="#team" class="footer-link-item">Team</a></li>
+            <li><a href="#projects" class="footer-link-item">Projects</a></li>
+            <li><a href="#contact" class="footer-link-item">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social-group">
+          <h4 class="footer-title">Connect With Us</h4>
+          <div class="footer-socials">
+            <!-- GitHub -->
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 .3C5.4.3 0 5.7 0 12.4c0 5.3 3.5 9.8 8.2 11.4.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1.1 1.9 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.3-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18 3 19 3.2 19 3.2c.6 1.7.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"></path>
+              </svg>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 The Boring Club. All rights reserved.</p>
+        <p class="footer-author">Made for College Project Submission</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/app.js"></script>
+</body>
+</html>
