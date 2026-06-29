@@ -53,7 +53,7 @@
   color-scheme: light dark;
 }
 
-:root.dark {
+html.dark {
   /* Theme: Dark Mode Overrides */
   --bg-primary: #090d16;
   --bg-secondary: #0f1420;

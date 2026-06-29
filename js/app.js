@@ -26,35 +26,35 @@ const teamMembers = [
     name: "Abhishek Jain",
     role: "Frontend Developer & UI Lead",
     skills: ["HTML5", "CSS3", "JavaScript", "UI Design"],
-    github: "https://github.com",
+    github: "https://github.com/abhishek711p-pixel",
     image: "assets/avatars/avatar1.png"
   },
   {
     name: "Radhika",
     role: "UI/UX Designer",
     skills: ["User Research", "Wireframes", "Figma", "CSS Layouts"],
-    github: "https://github.com",
+    github: "https://github.com/parbhakarradhika301-cmd",
     image: "assets/avatars/avatar2.png"
   },
   {
     name: "Rupak Sai",
     role: "Fullstack Developer",
     skills: ["JavaScript", "Node.js", "DOM Manipulation", "Git"],
-    github: "https://github.com",
+    github: "https://github.com/rupaksainemalipuri-02",
     image: "assets/avatars/avatar3.png"
   },
   {
     name: "Shahil",
     role: "Backend Architect",
     skills: ["Data Architecture", "APIs", "Unit Testing", "Security"],
-    github: "https://github.com",
+    github: "https://github.com/shahilhossain230406-ai",
     image: "assets/avatars/avatar1.png"
   },
   {
     name: "Anuj",
     role: "DevOps & Scrum Master",
     skills: ["CI/CD Pipelines", "Git Workflow", "Web Performance", "Agile"],
-    github: "https://github.com",
+    github: "https://github.com/Anuj-uniyal",
     image: "assets/avatars/avatar5.png"
   }
 ];
@@ -64,46 +64,25 @@ const teamMembers = [
  */
 const projects = [
   {
-    title: "Zenith Task Manager",
-    description: "A premium productivity dashboard featuring drag-and-drop task items, theme switching, and interactive calendar views.",
+    title: "Github Developer Explorer",
+    description: "Explore GitHub profiles and repositories with this powerful developer tool.",
     technologies: ["HTML5", "CSS3", "Vanilla JS"],
-    github: "https://github.com",
+    github: "https://github-dev-explorer-alpha.vercel.app/",
     image: "assets/project-images/project1.png"
   },
   {
-    title: "Nova Chat Dashboard",
-    description: "A modern glassmorphism chat application mockup with custom sidebar notifications, message scroll features, and reactive layout.",
+    title: "Pocket Track",
+    description: "An expense tracker application to manage and monitor your finances.",
     technologies: ["CSS3 Flex", "DOM APIs", "Vanilla JS"],
-    github: "https://github.com",
+    github: "https://pocket-track-ashen.vercel.app/",
     image: "assets/project-images/project2.png"
   },
   {
-    title: "CryptoVault Tracker",
-    description: "A cryptocurrency asset tracking interface displaying active price changes, portfolio charts, and recent transaction history.",
+    title: "Quiz Application",
+    description: "An interactive quiz application to test your knowledge.",
     technologies: ["HTML5 Canvas", "SVG Icons", "Vanilla JS"],
-    github: "https://github.com",
+    github: "https://quiz-applicatiom-6b96v7i4q-radhikas-projects-4c6bee5c.vercel.app/",
     image: "assets/project-images/project3.png"
-  },
-  {
-    title: "EcoSphere Ecology Hub",
-    description: "An interactive environmental dashboard tracking energy efficiency and ecosystem health statistics using clean layout grid cards.",
-    technologies: ["HTML5", "CSS Grid", "JS Counters"],
-    github: "https://github.com",
-    image: "assets/project-images/project4.png"
-  },
-  {
-    title: "Apex Code Playground",
-    description: "A light-weight online code playground workspace with custom tab navigation, syntax color indicators, and preview panel.",
-    technologies: ["HTML5", "CSS Variables", "DOM Manipulation"],
-    github: "https://github.com",
-    image: "assets/project-images/project5.png"
-  },
-  {
-    title: "SoundWave Web Player",
-    description: "A gorgeous browser-based audio player with playlist sliders, custom range sliders, progress bars, and floating notes elements.",
-    technologies: ["HTML5 Audio", "CSS3 Keyframes", "Vanilla JS"],
-    github: "https://github.com",
-    image: "assets/project-images/project6.png"
   }
 ];
 
@@ -189,7 +168,7 @@ function renderProjects() {
             <svg viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 .3C5.4.3 0 5.7 0 12.4c0 5.3 3.5 9.8 8.2 11.4.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1.1 1.9 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.3-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C18 3 19 3.2 19 3.2c.6 1.7.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"></path>
             </svg>
-            Source Code
+            Link
           </a>
         </div>
       </div>
